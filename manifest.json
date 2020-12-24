@@ -1,7 +1,7 @@
 {
-  "name": "Press Mag",
-  "short_name": "Press Mag",
-  "description": "Press Mag",
+  "name": "Blog Rapat",
+  "short_name": "Blog Rapat",
+  "description": "Blog Rapat",
   "lang": "en-US",
   "start_url": "/press_mag/",
   "display": "standalone",
