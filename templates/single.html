@@ -1,0 +1,42 @@
+{{#post}} {{> "modern_card_partial"}}
+
+<div class="press-single-author display-flex align-items-center justify-content-space-between">
+    <div class="display-flex">
+        <div class="press-bg-img press-post-author-img">
+            <img class="lazy lazy-fade-in" data-src="{{ _embedded['author'][0].avatar_urls['96'] }}" alt="{{ _embedded['author'][0].name }}">
+        </div>
+        <div>
+            <span class="press-body-1 text-color-gray">Written by</span>
+            <div class="press-post-author press-body-2">
+                <a href="/author/{{ _embedded['author'][0].id }}" class="text-color-black">{{ _embedded['author'][0].name }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="press-nbr-comments display-flex flex-direction-column ">
+        <span class="press-body-2"></span>
+        <span class="press-body-1 text-color-gray">Comments</span>
+    </div>
+</div>
+
+<div class="press-single-the-content">
+    {{ content.rendered }}
+</div>
+
+<div class="press-tags">
+    {{#each _embedded['wp:term'][1]}}
+    <a href="/tag/{{id}}"><span class="badge">{{name}}</span></a> {{/each}}
+</div>
+
+<div class="press-socials display-flex justify-content-center">
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{link}}" class="link external press-social press-social-fb">
+        <i data-feather="facebook"></i>
+    </a>
+    <a href="whatsapp://send?text={{link}}" class="link external press-social press-social-whatsapp">
+        <i data-feather="phone"></i>
+    </a>
+    <a href="https://twitter.com/share?url={{link}}" class="link external press-social press-social-twitter">
+        <i data-feather="twitter"></i>
+    </a>
+</div>
+
+{{/post}}

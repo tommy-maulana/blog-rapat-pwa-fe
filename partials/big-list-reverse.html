@@ -1,0 +1,14 @@
+<div class="press-big-list display-flex flex-direction-row-reverse">
+    <div class="press-bg-img">
+        <img class="lazy lazy-fade-in" data-src="{{#if _embedded['wp:featuredmedia']}}{{ _embedded['wp:featuredmedia'][0].source_url }} {{/if}}" alt="{{ id }}">
+    </div>
+    <div class="press-big-list-content">
+        <div class="press-big-list-category press-body-1">
+            <a href="/category/{{_embedded['wp:term'][0][0].id}}" style="color:#{{_embedded['wp:term'][0][0].color}};">{{ _embedded['wp:term'][0][0].name }}</a>
+        </div>
+        <div class="press-big-list-title press-title-3">
+            <a href="/single/{{ id }}" class="text-color-black">{{ title.rendered }}</a>
+        </div>
+        <div class="press-post-date press-body-1 text-color-gray">{{js "moment(this.date).format('LL')"}}</div>
+    </div>
+</div>

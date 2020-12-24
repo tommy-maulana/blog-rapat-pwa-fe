@@ -1,0 +1,15 @@
+<div class="press-modern-card">
+    <div class="press-bg-img">
+        <img class="lazy lazy-fade-in" data-src="{{#if _embedded['wp:featuredmedia']}}{{ _embedded['wp:featuredmedia'][0].source_url }} {{/if}}" alt="{{ id }}">
+    </div>
+    <div class="press-modern-card-content display-flex flex-direction-column align-items-flex-start justify-content-flex-end padding">
+        <div class="press-badge press-body-1" style="background: #{{_embedded['wp:term'][0][0].color}};">
+            <a href="/category/{{_embedded['wp:term'][0][0].id}}" class=" press-badgetext-color-white">{{ _embedded['wp:term'][0][0].name }}</a>
+        </div>
+        <div class="press-modern-card-title press-title-1">
+            <a href="/single/{{ id }}" class="text-color-white">{{ title.rendered }}</a>
+        </div>
+        <div class="press-post-date press-body-1 text-color-gray">{{js "moment(this.date).format('LL')"}}</div>
+    </div>
+    <div class="press-bg-shadow"></div>
+</div>

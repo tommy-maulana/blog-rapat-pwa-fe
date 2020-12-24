@@ -1,0 +1,748 @@
+/*==============================================
+[Main stylesheet app.css]
+
+Author:			WM_Team
+Version:		1.0
+Created:		03 October 2020
+Last updated:	06 October 2020
+Template:		PressMag - Blog & Magazine Mobile
+================================================*/
+/*
+[Table of Contents]
+
+01. GENERAL
+02. NAVBAR
+03. PANEL
+04. FOOTER
+05. SECTION
+06. SWIPER
+07. MODERN CARD
+08. BIG LIST
+09. SMALL LIST
+10. CLASSIC CARD
+11. CLASSIC POST
+12. COMMENTS
+13. SEARCH PAGE
+14. 404 PAGE
+15. RESPONSIVE
+*/
+
+/*===============================================*/
+/* 01. GENERAL	 						    	 */
+/*===============================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html.fonts-loaded body {
+    font-family: 'Poppins', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.press-bg-img {
+    position: relative;
+    background-color: #eaeaea;
+}
+
+.theme-dark .press-bg-img,
+.press-section-black .press-bg-img {
+    background-color: #bbb;
+}
+
+.press-bg-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: transparent;
+}
+
+.press-title-1 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.press-title-2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.press-title-3 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.press-body-1 {
+    font-size: 12px;
+}
+
+.press-body-2 {
+    font-size: 14px;
+}
+
+.theme-dark .text-color-black,
+.press-section-black .text-color-black,
+.press-section-black .press-section-title-wrapper {
+    color: rgba(255, 255, 255, 0.87)!important;
+}
+
+.skeleton-text,
+.skeleton-text * {
+    letter-spacing: -2px !important;
+}
+
+.skeleton-block {
+    width: 100%;
+    height: 100vh;
+}
+
+.press-bg-shadow {
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.8) 100%, rgba(0, 0, 0, 0.9) 100%);
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.press-bg-shadow.press-bg-shadow-top {
+    height: 150px;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.8) 100%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+/*===============================================*/
+/* 02. NAVBAR	 						    	 */
+/*===============================================*/
+
+.navbar-transparent .title {
+    opacity: 1!important;
+}
+
+.navbar .press-logo,
+.press-logo {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+}
+
+.press-logo span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ff3b30;
+    border-radius: 100%;
+    position: relative;
+    right: 5px;
+}
+
+
+/*===============================================*/
+/* 03. PANEL	 						    	 */
+/*===============================================*/
+
+.press-panel-links a {
+    display: block;
+    color: gray;
+    padding: 10px 0px;
+}
+
+.press-panel .list .item-title {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.press-panel .list .accordion-item-opened .item-title {
+    color: var(--f7-theme-color);
+}
+
+.press-panel .accordion-item-opened .block {
+    border-top: 1px solid var(--f7-list-item-border-color);
+}
+
+.press-panel .list .accordion-item.press-link-without-children>.item-link .item-inner::before {
+    content: '';
+    width: 0px;
+}
+
+.press-panel .list ul::before,
+.press-panel .list ul::after,
+.press-search-form ul::before,
+.press-search-form ul::after {
+    background: transparent;
+}
+
+.press-panel .accordion-item {
+    border-bottom: 1px solid var(--f7-list-item-border-color);
+}
+
+.press-panel .accordion-item:first-child {
+    border-top: 1px solid var(--f7-list-item-border-color);
+}
+
+
+/*===============================================*/
+/* 04. FOOTER	 						    	 */
+/*===============================================*/
+
+.press-footer-content {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.press-footer-content:before {
+    content: '';
+    height: 1px;
+    background: #efefef;
+    width: 60px;
+    margin: 0px auto;
+    display: block;
+}
+
+.theme-dark .press-footer-content:before {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.press-footer-content p {
+    width: 90%;
+    margin: 10px auto;
+}
+
+.press-socials {
+    margin-top: 20px;
+}
+
+.press-social {
+    width: 50px;
+    height: 50px;
+    background: #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+    color: #ffffff;
+}
+
+.press-social-fb {
+    background: #3b5999;
+}
+
+.press-social-twitter {
+    background: #55acee;
+}
+
+.press-social-whatsapp {
+    background: #25D366;
+}
+
+.press-footer-nav {
+    margin-top: 20px;
+}
+
+
+/*===============================================*/
+/* 05. SECTION	 						    	 */
+/*===============================================*/
+
+.press-section {
+    padding: 16px 16px;
+}
+
+.press-section-gray {
+    background: #f9f9f9;
+}
+
+.theme-dark .press-section-gray,
+.theme-dark .press-section-black {
+    background: #151515;
+}
+
+.theme-dark .press-big-list,
+.theme-dark .press-small-list,
+.theme-dark .press-classic-card,
+.theme-dark .press-classic-post,
+.press-section-black .press-big-list,
+.press-section-black .press-small-list,
+.press-section-black .press-classic-card,
+.press-section-black .press-classic-post {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.theme-dark .press-nbr-comments,
+.theme-dark .press-list-comments > div {
+	border-color: rgba(255, 255, 255, 0.1);
+}
+
+.press-section-black {
+    background: #121212;
+}
+
+.press-section-title-wrapper {
+    margin-bottom: 24px;
+}
+
+.press-page .press-section-title-wrapper .press-title-2 {}
+
+.press-section-content,
+.press-section-with-nav {
+    position: relative;
+}
+
+
+/*===============================================*/
+/* 06. SWIPER	 						    	 */
+/*===============================================*/
+
+.press-slide-navigation {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+}
+
+.press-slide-navigation>div {
+    background: #c8c6c7;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    position: relative;
+    bottom: 0;
+    margin-top: 16px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 15px;
+    height: 5px;
+    border-radius: 8px;
+    transition: all .3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    width: 30px!important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: var(--f7-theme-color);
+}
+
+/*===============================================*/
+/* 07. MODERN CARD	 						     */
+/*===============================================*/
+
+.press-modern-card {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.press-modern-card:last-child {
+    margin-bottom: 0px;
+}
+
+.press-modern-card .press-bg-img {
+    height: 350px;
+}
+
+.press-badge {
+    display: inline-block;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0px 5px;
+}
+
+.press-modern-card-content {
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    z-index: 99;
+}
+
+.press-modern-card-title {
+    margin: 10px 0;
+}
+
+.press-post-date {
+    font-weight: 500;
+}
+
+.press-grid>div:last-child {
+    margin-top: 25px
+}
+
+.press-modern-card-grid,
+.press-classic-card-grid,
+.press-classic-post-grid {
+    margin-bottom: 16px;
+}
+
+.press-modern-card-grid:last-child,
+.press-classic-card-grid:last-child,
+.press-classic-post-grid:last-child {
+    margin-bottom: 0px;
+}
+
+
+/*===============================================*/
+/* 08. BIG LIST	 						    	 */
+/*===============================================*/
+
+.press-big-list {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.press-big-list:last-child {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+.press-big-list-content {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.press-big-list .press-bg-img {
+    height: 125px;
+    width: 125px;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.press-big-list.flex-direction-row-reverse .press-bg-img {
+    margin-left: 10px;
+    margin-right: 0px;
+}
+
+.press-big-list-title {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.press-big-list-category {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+/*===============================================*/
+/* 09. SMALL LIST	 					    	 */
+/*===============================================*/
+
+.press-small-list {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.press-small-list:last-child {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+.press-small-list-content {
+    margin-top: 5px;
+    width: 100%;
+}
+
+.press-small-list .press-bg-img {
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.press-small-list.flex-direction-row-reverse .press-bg-img {
+    margin-left: 10px;
+    margin-right: 0px;
+}
+
+.press-small-list-title {
+    margin-bottom: 5px;
+}
+
+
+/*===============================================*/
+/* 10. CLASSIC CARD						    	 */
+/*===============================================*/
+
+.press-classic-card {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.press-classic-card:last-child {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+.press-classic-card-content-wrapper>.press-bg-img {
+    height: 350px;
+}
+
+.press-classic-card-content-wrapper {
+    position: relative;
+}
+
+.press-classic-card-content {
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    z-index: 99;
+}
+
+.press-post-author {
+    font-weight: 500;
+}
+
+.press-post-author-img {
+    width: 46px;
+    height: 46px;
+    border-radius: 100%;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.press-post-author-img img {
+    border-radius: 100%;
+}
+
+.press-classic-card .press-bg-shadow {
+    height: 100px;
+}
+
+.press-classic-card-title {
+    margin-top: 16px;
+}
+
+
+/*===============================================*/
+/* 11. CLASSIC POST						    	 */
+/*===============================================*/
+
+.press-classic-post {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.press-classic-post:last-child {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+.press-classic-post-content-wrapper>.press-bg-img {
+    height: 280px;
+}
+
+.press-classic-post-content-wrapper {
+    position: relative;
+}
+
+.press-classic-post-content {
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    z-index: 99;
+}
+
+.press-classic-card .press-bg-shadow {
+    height: 100px;
+}
+
+.press-classic-post-title {
+    margin-top: 8px;
+}
+
+.press-classic-post-readmore {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/*===============================================*/
+/* 12. COMMENTS	 						    	 */
+/*===============================================*/
+
+.press-nbr-comments {
+    padding: 10px;
+    border: 1px solid #efefef;
+    text-align: center;
+}
+
+.press-nbr-comments span:first-child {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.press-single-content .press-socials {
+    margin-top: 40px
+}
+
+.press-list-comments>div {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #efefef;
+}
+
+.press-list-comments>div:last-child {
+    margin-bottom: 0px;
+    border-bottom: 0px;
+}
+
+.press-more-comments {
+    margin-top: 32px;
+}
+
+#comments-1,
+#comments-2 {
+    display: none;
+}
+
+.press-comment-form .list .item-content {
+    padding: 0px;
+}
+
+.page-current .press-comment-form {
+    display: none;
+}
+
+.press-comment-closed {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    margin: 16px 16px 0px;
+    font-weight: 600;
+    display: none;
+}
+
+.press-single-content .press-classic-card {
+    border: 0px;
+}
+
+.page-single .page-content>.block {
+    margin-top: 10px;
+}
+
+.press-load-more-posts {
+    display: none;
+}
+
+
+/*===============================================*/
+/* 13. SEARCH PAGE 						    	 */
+/*===============================================*/
+
+.press-search-form.list .item-input-outline input {
+    background-color: #efefef;
+    font-size: 14px;
+	height: 45px;
+}
+
+.press-search-form.list .item-inner {
+	padding: 0px;
+}
+
+.press-search-form.list .input-outline::after,
+.press-search-form.list .item-input-outline .item-input-wrap::after {
+    border: 0px;
+}
+
+.theme-dark .press-search-form.list .item-input-outline input {
+    background-color: transparent;
+}
+
+/*===============================================*/
+/* 14. 404 PAGE	 						    	 */
+/*===============================================*/
+
+.press-404 {
+	height: 100vh;
+	text-align: center;
+	padding: 0px 32px;
+}
+
+.press-404 img {
+	max-width: 100%;
+	margin: 0px auto;
+}
+
+.press-404 h1 {
+	font-size: 80px;
+	margin: 20px 0px;
+	line-height: 55px;
+}
+
+.press-404 h2 {
+	font-size: 25px;
+	margin: 0px;
+}
+
+.press-404 a {
+	display: block;
+	margin-top: 30px;
+}
+
+/*===============================================*/
+/* 15. RESPONSIVE 						    	 */
+/*===============================================*/
+
+@media only screen and (min-width: 768px) {
+    .press-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+    .press-grid>div:last-child {
+        margin-top: 0px
+    }
+    .press-grid>.press-bg-img {
+        height: 343px;
+    }
+    .press-classic-post-grid,
+    .press-modern-card-grid,
+    .press-classic-card-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+    .press-classic-post-grid .press-classic-post,
+    .press-classic-card-grid .press-classic-card {
+        border-bottom: 0px;
+    }
+    .press-classic-post-grid .press-classic-post-content-wrapper>.press-bg-img {
+        height: 350px;
+    }
+    .press-modern-card-grid .press-modern-card .press-bg-img {
+        height: 390px;
+    }
+    .press-single-content .press-classic-card-content-wrapper>.press-bg-img,
+    .press-single-content .press-modern-card .press-bg-img {
+        height: 600px;
+    }
+}

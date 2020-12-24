@@ -1,0 +1,14 @@
+{{#each comments}}
+	<div class="press-comment">
+		<div class="display-flex">
+			<div class="press-bg-img press-post-author-img">
+				<img class="lazy lazy-fade-in" data-src="{{ author_avatar_urls['96'] }}" alt="{{ id }}">
+			</div>
+			<div>
+				<span class="press-post-author press-body-2 text-color-gray">{{ author_name }}</span>
+				<div class="press-post-date press-body-1">{{js "moment(this.date).format('LL')"}}</div>
+			</div>
+		</div>
+		{{content.rendered}}
+	</div>
+{{/each}}

@@ -1,0 +1,26 @@
+<div class="press-classic-card">
+    <div class="press-classic-card-content-wrapper">
+        <div class="press-bg-shadow press-bg-shadow-top"></div>
+        <div class="press-bg-img">
+            <img class="lazy lazy-fade-in" data-src="{{#if _embedded['wp:featuredmedia']}}{{ _embedded['wp:featuredmedia'][0].source_url }} {{/if}}" alt="{{ id }}">
+        </div>
+        <div class="display-flex flex-direction-column align-items-flex-start justify-content-space-between press-classic-card-content padding">
+            <div class="press-badge press-body-1" style="background: #{{_embedded['wp:term'][0][0].color}};">
+                <a href="/category/{{_embedded['wp:term'][0][0].id}}" class=" press-badge text-color-white">{{ _embedded['wp:term'][0][0].name }}</a>
+            </div>
+            <div class="display-flex">
+                <div class="press-bg-img press-post-author-img">
+                    <img class="lazy lazy-fade-in" data-src="{{ _embedded['author'][0].avatar_urls['96'] }}" alt="{{ _embedded['author'][0].name }}">
+                </div>
+                <div>
+                    <a href="/author/{{ _embedded['author'][0].id }}" class="press-post-author press-body-2 text-color-white">{{ _embedded['author'][0].name }}</a>
+                    <div class="press-post-date press-body-1 text-color-gray">{{js "moment(this.date).format('LL')"}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="press-bg-shadow"></div>
+    </div>
+    <div class="press-classic-card-title press-title-1">
+        <a href="/single/{{ id }}" class="text-color-black">{{ title.rendered }}</a>
+    </div>
+</div>

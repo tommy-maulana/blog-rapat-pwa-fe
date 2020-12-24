@@ -1,0 +1,21 @@
+<div class="press-classic-post">
+    <div class="press-classic-post-content-wrapper">
+        <div class="press-bg-shadow press-bg-shadow-top"></div>
+        <div class="press-bg-img">
+            <img class="lazy lazy-fade-in" data-src="{{#if _embedded['wp:featuredmedia']}}{{ _embedded['wp:featuredmedia'][0].source_url }} {{/if}}" alt="{{ id }}">
+        </div>
+        <div class="display-flex flex-direction-column align-items-flex-start justify-content-space-between press-classic-post-content padding">
+            <div class="press-badge press-body-1" style="background: #{{_embedded['wp:term'][0][0].color}};">
+                <a href="/category/{{_embedded['wp:term'][0][0].id}}" class=" press-badge text-color-white">{{ _embedded['wp:term'][0][0].name }}</a>
+            </div>
+        </div>
+    </div>
+    <div class="press-post-date press-body-1 text-color-gray margin-top">{{js "moment(this.date).format('LL')"}}</div>
+    <div class="press-classic-post-title press-title-1">
+        <a href="/single/{{ id }}" class="text-color-black">{{ title.rendered }}</a>
+    </div>
+    <div class="press-classic-post-exerpt text-color-gray">
+        {{js "this.excerpt.rendered.substring(0,125) + ' [..]' "}}
+    </div>
+    <a href="/single/{{ id }}" class="press-classic-post-readmore">Read more</a>
+</div>

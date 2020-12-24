@@ -1,0 +1,15 @@
+<div class="press-grid">
+{{#each posts}}
+	{{#if @first}}
+		<div>
+			{{> "classic_card_partial"}}
+		</div>
+		<div>
+	{{else}}
+		{{> "small_list_reverse_partial"}}
+	{{/if}}
+	{{#if @last}}
+		</div>
+	{{/if}}
+{{/each}}
+</div>
