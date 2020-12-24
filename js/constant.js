@@ -1,6 +1,6 @@
 'use strict';
 
-const baseURL = 'https://themeswow.com';
+const baseURL = 'https://meet.unsri.co';
 const comment_per_page = 3;
 const related_nbr_posts = 4;
 const no_more_comment_text = 'No more comment to load';
